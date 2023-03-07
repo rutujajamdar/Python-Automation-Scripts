@@ -10,8 +10,8 @@ from email.mime.multipart import MIMEMultipart
 
 def MailSender(C_name,C_GSTIN,C_Inv_no,C_Inv_val,time) :
     try :
-        fromaddr = "rutujajamdar19@gmail.com"
-        toaddr = "rutujajamdar19@gmail.com"
+        fromaddr = ""
+        toaddr = ""
 
         msg = MIMEMultipart()
 
@@ -50,7 +50,7 @@ def MailSender(C_name,C_GSTIN,C_Inv_no,C_Inv_val,time) :
 
         s.starttls()
 
-        s.login(fromaddr,"ijpmbhanswucgqev")
+        s.login(fromaddr,"")
 
         text = msg.as_string()
 
