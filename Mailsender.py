@@ -24,8 +24,8 @@ def is_connected() :
 
 def MailSender(filename,time) :
     try :
-        fromaddr = "rutujajamdar19@gmail.com"
-        toaddr = "rutujajamdar19@gmail.com"
+        fromaddr = ""
+        toaddr = ""
 
         msg = MIMEMultipart()
 
@@ -34,20 +34,19 @@ def MailSender(filename,time) :
 
         body = """
         Hello %s,
-        Welcome to Marvellous Infosystem.
+        Welcome to our Application.
         Please find attached documnet which contains Log of Running Process.
         Log file is created at : %s
 
         This is auto generated mail.
 
         Thanks & Regards,
-        Piyush Manohar Khairnar
-        Marvellous Infosystems
+        Rutuja Jamdar
 
         """%(toaddr,time)
 
         subject = """
-        Marvellous Infosystem Process log generated at : %s
+        Process log generated at : %s
 
         """%(time)
 
@@ -72,7 +71,7 @@ def MailSender(filename,time) :
 
         s.starttls()
 
-        s.login(fromaddr,"ijpmbhanswucgqev")
+        s.login(fromaddr,"")
 
         text = msg.as_string()
 
@@ -128,7 +127,7 @@ def main() :
     else :
         print("Connection failed")
 
-    print("----------Marvellous Infosystem by Piyush Khairnar---------")
+    print("----------MailSender Application---------")
 
     print("Application name : "+argv[0])
 
